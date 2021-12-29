@@ -6,14 +6,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def main():
-    return render_template("main.html")
+    return render_template("index.html")
 
 
-@app.route('/sign-in')
-def detail():
-    return render_template("sign-in.html")
-
-@app.route('/sign_up')
+@app.route('/sign-up')
 def detail():
     return render_template("sign-up.html")
 

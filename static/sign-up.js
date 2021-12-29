@@ -1,3 +1,4 @@
+// 이미지 업로드스크립트
 function DropFile(dropAreaId, fileListId) {
   let dropArea = document.getElementById(dropAreaId);
   let fileList = document.getElementById(fileListId);
@@ -63,3 +64,19 @@ function DropFile(dropAreaId, fileListId) {
 
 const dropFile = new DropFile("drop-file", "files");
 
+//비밀번호 확인 스크립트
+function check_pw() {
+  var p1 = document.getElementById('password1').value;
+  var p2 = document.getElementById('password2').value;
+  if(p1 != p2) {
+    document.getElementById('check').innerHTML = 'X'
+    document.getElementById('check').style.color = 'red'
+    document.getElementById('check').style.fontSize = "10vw"
+
+  }
+  else {
+    document.getElementById('check').innerHTML = 'O'
+    document.getElementById('check').style.color = 'green'
+    document.getElementById('check').style.fontSize = "10vw"
+  }
+}

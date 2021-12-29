@@ -103,8 +103,14 @@
     outline: none;
 }
 .confirm_check {
+    color: green;
+    font-size: 25px;
+    display: none;
+}
+.no_confirm_check {
     color: red;
     font-size: 25px;
+    display: none;
 }
 .signup_nickname {
     margin-top: 15px;
@@ -204,8 +210,8 @@
     height: 10vw;
     border: 0;
     outline: none;
-    border-radius: 40px;
-    background-color: lightblue;
+    border-radius: 10px;
+    background-color: gainsboro;
     font-size: 20px;
     color: white;
     letter-spacing: 2px;

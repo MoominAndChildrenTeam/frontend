@@ -20,19 +20,18 @@
 
             <div class="signup_id">
                 <h4>E-MAil :</h4>
-                <input type="id" placeholder="enter your email">
+                <input type="email" placeholder="enter your email">
                 <div class="email_confirm_button">
                     <button type="submit" value="submit"> 인증 </button>
                 </div>
             </div>
             <div class="signup_pw">
                 <h4>PW : </h4>
-                <input type="password" placeholder="enter your password">
+                <input type="password" id="password1" onchange="check_pw()" placeholder="enter your password">
             </div>
             <div class="signup_pw_confirm">
                 <h4>PW-confirm : </h4>
-                <input type="password" placeholder="confirm your password">
-                <div class = "confirm_check"><strong>X</strong></div>
+                <input  type="password" id="password2" placeholder="confirm your password"onchange="check_pw()">&nbsp;<span id="check"></span>
             </div>
             <div class="signup_nickname">
                 <h4>NICKNAME : </h4>
@@ -41,22 +40,22 @@
                     <button type="submit" value="submit"> 중복 확인 </button>
                 </div>
             </div>
-
-            <div class="signup_button">
-                <button type="submit" value="submit"> Sign Up</button>
-            </div>
-
-
             <div class="upload-box">
                 <div id="drop-file" class="drag-file">
                     <img src="../images/upload.png" alt="파일 아이콘" class="image">
                     <p class="message">Drag files to upload</p>
                     <img src="" alt="미리보기 이미지" class="preview">
                 </div>
-                <label class="file-label" for="chooseFile">Choose File</label>
+                <label class="file-label" for="chooseFile">Choose Profile-Image</label>
                 <input class="file" id="chooseFile" type="file" onchange="dropFile.handleFiles(this.files)"
                        accept="image/png, image/jpeg, image/gif">
             </div>
+            <div class="signup_button">
+                <button type="submit" value="submit"> Sign Up</button>
+            </div>
+
+
+
 
         </div>
     </div>
