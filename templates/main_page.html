@@ -5,33 +5,36 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>moominstagram</title>
     <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap" rel="stylesheet">
-    <link href="main_page_style.css" rel="stylesheet">
+    <link href="../static/main_page_style.css" rel="stylesheet">
 </head>
 <body class="whole-screen">
     <div class="screen">
         <div class="header">
-            <img class="logo-img" src="./images/moomingram.png">
+            <div class="header-items-wrapper">
+               <img class="logo-img" src="../images/moomingram.png">
+                <button id="camera-btn"></button>
+            </div>
         </div>
         <div class="story">
             <div class="users-stories">
                 <div class="each-user-story">
-                    <img id="user1-story-img" src="images/무민.jfif"/>
+                    <button id="user1-story-img-btn"></button>
                     <p id="user1-name">nickname</p>
                 </div>
                 <div class="each-user-story">
-                    <img id="user2-story-img" src="images/무민.jfif"/>
+                    <img id="user2-story-img-btn" src="../images/무민.jfif"/>
                     <p id="user2-name">nickname</p>
                 </div>
                 <div class="each-user-story">
-                    <img id="user3-story-img" src="images/무민.jfif"/>
+                    <img id="user3-story-img-btn" src="../images/무민.jfif"/>
                     <p id="user3-name">nickname</p>
                 </div>
                 <div class="each-user-story">
-                    <img id="user4-story-img" src="images/무민.jfif"/>
+                    <img id="user4-story-img-btn" src="../images/무민.jfif"/>
                     <p id="user4-name">nickname</p>
                 </div>
                 <div class="each-user-story">
-                    <img id="user5-story-img" src="images/무민.jfif"/>
+                    <img id="user5-story-img-btn" src="../images/무민.jfif"/>
                     <p id="user5-name">nickname</p>
                 </div>
             </div>
@@ -45,7 +48,7 @@
             </div>
             <img src="https://t1.daumcdn.net/cfile/tistory/9919334E5B28A1E331">
             <div class="active-btns-wrapper">
-                <button id="comment-btn"></button>
+                <button class="comment-btn"></button>
                 <button class="favorite-btn"></button>
             </div>
             <div class="user-comment-wrapper">
@@ -59,7 +62,7 @@
         <div class="mobile-footer">
             <button id="home-btn"></button>
             <button id="search-btn"></button>
-            <button id="camera-btn"></button>
+            <button id="plus-btn"></button>
             <button class="favorite-btn"></button>
             <button id="my-page-img-btn"></button>
         </div>

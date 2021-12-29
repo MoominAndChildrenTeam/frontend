@@ -9,27 +9,48 @@
 .screen {
     display: flex;
     flex-direction: column;
-
-    margin: 0 auto;
 }
 
 .header {
-    border-bottom-width: 0.1vh;
-    border-bottom-style: solid;
-    border-bottom-color: lightgrey;
+    border-bottom: 0.1vh solid lightgrey;
 
     display: flex;
     align-items: center;
-    justify-content: center;
 
     height: 15vw;
 
     width: 100%;
 }
 
+.header-items-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+    padding-right: 8%;
+}
+
+#camera-btn {
+    height: 29px;
+    width: 32px;
+
+    background-image: url("../images/camera@3x.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    border: none;
+    background-color: transparent;
+}
+
 .logo-img {
     width: 40vw;
     height: 15vw;
+
+    margin-left: 32%;
 }
 
 .story {
@@ -64,39 +85,81 @@
     font-weight: bold;
 }
 
-#user1-story-img {
+#user1-story-img-btn {
     border-radius: 50%;
     height: 60px;
     width: 60px;
+
+    background-image: url("../images/무민.jfif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border: none;
+    background-color: transparent;
 }
 
-#user2-story-img {
+#user2-story-img-btn {
     border-radius: 50%;
     height: 60px;
     width: 60px;
+
+    background-image: url("../images/무민.jfif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border: none;
+    background-color: transparent;
 }
 
-#user3-story-img {
+#user3-story-img-btn {
     border-radius: 50%;
     height: 60px;
     width: 60px;
+
+    background-image: url("../images/무민.jfif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border: none;
+    background-color: transparent;
 }
 
-#user4-story-img {
+#user4-story-img-btn {
     border-radius: 50%;
     height: 60px;
     width: 60px;
+
+    background-image: url("../images/무민.jfif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border: none;
+    background-color: transparent;
 }
 
-#user5-story-img {
+#user5-story-img-btn {
     border-radius: 50%;
     height: 60px;
     width: 60px;
+
+    background-image: url("../images/무민.jfif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border: none;
+    background-color: transparent;
 }
 
 .feed {
     display: flex;
     flex-direction: column;
+
+    border-top: solid rgba(211, 211, 211, 0.3);
 }
 
 .user-name-and-img {
@@ -113,6 +176,7 @@
 
 .feed-user-name {
     font-weight: bold;
+    font-size: 3vmax;
 }
 
 .user-page-img-btn {
@@ -120,7 +184,7 @@
     height: 40px;
     width: 40px;
 
-    background-image: url("images/무민.jfif");
+    background-image: url("../images/무민.jfif");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -138,11 +202,11 @@
     padding: 3% 5% 0 5%;
 }
 
-#comment-btn {
+.comment-btn {
     height: 30px;
     width: 30px;
 
-    background-image: url("/images/comment@3x.png");
+    background-image: url("../images/comment@3x.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -205,7 +269,7 @@
     height: 30px;
     width: 30px;
 
-    background-image: url("/images/home@3x.png");
+    background-image: url("../images/home@3x.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -218,7 +282,7 @@
     height: 30px;
     width: 30px;
 
-    background-image: url("/images/search@3x.png");
+    background-image: url("../images/search@3x.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -227,11 +291,11 @@
     background-color: transparent;
 }
 
-#camera-btn {
-    height: 30px;
-    width: 32px;
+#plus-btn {
+    height: 40px;
+    width: 40px;
 
-    background-image: url("/images/camera@3x.png");
+    background-image: url("../images/plus.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -244,7 +308,7 @@
     height: 29px;
     width: 32px;
 
-    background-image: url("/images/like@3x.png");
+    background-image: url("../images/like@3x.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -258,7 +322,7 @@
     height: 40px;
     width: 40px;
 
-    background-image: url("images/무민.jfif");
+    background-image: url("../images/무민.jfif");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
