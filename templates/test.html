@@ -5,31 +5,21 @@
     <title>Title</title>
 </head>
 <body>
-    <div class="container">
-        <div class="image-upload" id="image-upload">
-
-            <form method="post" enctype="multipart/form-data">
-                <div class="button">
-                    <label for="chooseFile">
-                        👉 CLICK HERE! 👈
-                    </label>
+    <div id="root">
+        <h2 class="title">File Upload</h2>
+        <hr>
+        <div class="contents">
+            <div class="upload-box">
+                <div id="drop-file" class="drag-file">
+                    <img src="../images/upload.png" alt="파일 아이콘" class="image">
+                    <p class="message">Drag files to upload</p>
+                    <img src="" alt="미리보기 이미지" class="preview">
                 </div>
-                <input type="file" id="chooseFile" name="chooseFile" accept="image/*" onchange="loadFile(this)">
-            </form>
-
-            <div class="fileContainer">
-                <div class="fileInput">
-                    <p>FILE NAME: </p>
-                    <p id="fileName"></p>
-                </div>
-                <div class="buttonContainer">
-                    <div class="submitButton" id="submitButton">SUBMIT</div>
-                </div>
+                <label class="file-label" for="chooseFile">Choose File</label>
+                <input class="file" id="chooseFile" type="file" onchange="dropFile.handleFiles(this.files)"
+                       accept="image/png, image/jpeg, image/gif">
             </div>
         </div>
-
-        <div class="image-show" id="image-show"></div>
     </div>
-
 </body>
 </html>

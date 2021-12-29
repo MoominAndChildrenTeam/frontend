@@ -47,19 +47,16 @@
             </div>
 
 
-            <div class="profile_container">
-                <div class="image_preview">
-                    <div class="preveiw" id="preveiw_container"></div>
-                    <img class="upload_img_size" src="../images/upload.png">
+            <div class="upload-box">
+                <div id="drop-file" class="drag-file">
+                    <img src="../images/upload.png" alt="파일 아이콘" class="image">
+                    <p class="message">Drag files to upload</p>
+                    <img src="" alt="미리보기 이미지" class="preview">
                 </div>
-                <input type="file" id="image" class="image_file" accept="image/*" onchange="setThumbnail(event);"/>
-                <button class="browse_button">UPLOAD IMAGE</button>
-
+                <label class="file-label" for="chooseFile">Choose File</label>
+                <input class="file" id="chooseFile" type="file" onchange="dropFile.handleFiles(this.files)"
+                       accept="image/png, image/jpeg, image/gif">
             </div>
-
-
-
-
 
         </div>
     </div>
