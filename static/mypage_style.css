@@ -86,7 +86,15 @@
             font-size: xx-large;
         }
 
-        .setting {
+        .settingbtn {
+            margin: auto 12vw auto auto;
+            height: 6vw;
+            background-color: #ffffff;
+            background-color: rgba( 255, 255, 255, 0.5 );
+            border-style: none;
+            width : 7vw;
+        }
+        .setting{
             margin: auto 15vw auto auto;
             height: 6vw;
         }
@@ -107,4 +115,9 @@
             width : 100%;
             padding-top: 15vw;
             padding-bottom: 20vw;
+        }
+        .btn{
+            border-style: none;
+            background-color: #ffffff;
+            background-color: rgba( 255, 255, 255, 0.5 );
         }
