@@ -3,14 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/sign_up.css">
     <title>moomingram</title>
-    <style>
-        * {
-      font-family: 'Dongle', sans-serif;
-    }
-    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="signup">
+            <div class="signup_upper_part">
+                <img class="logo" src="../images/moomingram.png">
+
+                <div class="sign_in_text">sign up</div>
+
+            </div>
+
+            <div class="signup_id">
+                <h4>E-MAil :</h4>
+                <input type="id" placeholder="enter your email">
+                <div class="email_confirm_button">
+                    <button type="submit" value="submit"> 인증 </button>
+                </div>
+            </div>
+            <div class="signup_pw">
+                <h4>PW : </h4>
+                <input type="password" placeholder="enter your password">
+            </div>
+            <div class="signup_pw_confirm">
+                <h4>PW-confirm : </h4>
+                <input type="password" placeholder="confirm your password">
+                <div class = "confirm_check"><strong>X</strong></div>
+            </div>
+            <div class="signup_nickname">
+                <h4>NICKNAME : </h4>
+                <input type="nickname" placeholder="enter your nickname">
+                <div class="nickname_confirm_button">
+                    <button type="submit" value="submit"> 중복 확인 </button>
+                </div>
+            </div>
+
+            <div class="signup_button">
+                <button type="submit" value="submit"> Sign Up</button>
+            </div>
+
+
+            <div class="image-upload" id="image-upload">
+
+                <form method="post" enctype="multipart/form-data">
+                    <div class="button">
+                        <label for="chooseFile">
+                            👉 CLICK HERE! 👈
+                        </label>
+                    </div>
+                    <input type="file" id="chooseFile" name="chooseFile" accept="image/*" onchange="loadFile(this)">
+                </form>
+
+                <div class="fileContainer">
+                    <div class="fileInput">
+                        <p>FILE NAME: </p>
+                        <p id="fileName"></p>
+                    </div>
+                    <div class="buttonContainer">
+                        <div class="submitButton" id="submitButton">SUBMIT</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-show" id="image-show"></div>
+
+
+        </div>
+    </div>
 
 </body>
 </html>

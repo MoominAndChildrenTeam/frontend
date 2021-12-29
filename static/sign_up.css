@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dongle', sans-serif;
+}
+
+.logo {
+    width: 100px;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    background: rgba(0, 0, 0, 0.1);
+}
+.signup_upper_part{
+    width: 350px;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sign_in_text {
+    font-size: 30px;
+    color: grey;
+}
+
+.signup {
+    background-color: white;
+    width: 90%;
+    height: 800px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 25px;
+}
+
+.signup_id {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 300px;
+    font-size: 20px;
+}
+
+.signup_id input {
+    font-size: 20px;
+    width: 200px;
+    height: 40px;
+    padding: 0px 20px;
+    border: 1px solid lightgray;
+    outline: none;
+}
+
+
+.signup_pw {
+    margin-top: 15px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 300px;
+    font-size: 20px;
+}
+
+.signup_pw input {
+    margin-right: 30px;
+    font-size: 20px;
+    width: 200px;
+    height: 40px;
+    padding: 0px 20px;
+    border: 1px solid lightgray;
+    outline: none;
+}
+.signup_pw_confirm {
+    padding-right: 39px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 360px;
+    font-size: 20px;
+}
+
+.signup_pw_confirm input {
+    font-size: 20px;
+    width: 200px;
+    height: 40px;
+    padding: 0px 20px;
+    border: 1px solid lightgray;
+    outline: none;
+}
+.confirm_check {
+    color: red;
+    font-size: 25px;
+}
+.signup_nickname {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 340px;
+    font-size: 20px;
+}
+
+.signup_nickname input {
+    font-size: 20px;
+    width: 200px;
+    height: 40px;
+    padding: 0px 20px;
+    border: 1px solid lightgray;
+    outline: none;
+}
+
+
+.btns {
+    margin-left: 25px;
+    margin-top: 40px;
+    width: 80%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+
+.login_button {
+    width: 100%;
+}
+
+.login_button button {
+    width: 80%;
+    height: 50px;
+    border: 0;
+    outline: none;
+    border-radius: 40px;
+    background-color: lightblue;
+    font-size: 20px;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.signup_button {
+    width: 100%;
+}
+
+.signup_button button {
+    width: 80%;
+    height: 50px;
+    border: 0;
+    outline: none;
+    border-radius: 40px;
+    background-color: lightblue;
+    font-size: 20px;
+    color: white;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .container {
+        width: 480px
+    }
+}
