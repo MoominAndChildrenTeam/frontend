@@ -6,11 +6,6 @@
     margin: 0;
 }
 
-.screen {
-    display: flex;
-    flex-direction: column;
-}
-
 .header {
     border-bottom: 0.1vh solid lightgrey;
 
@@ -40,14 +35,14 @@
     background-size: cover;
     background-position: center;
 
-    height: 30px;
-    width: 30px;
+    height: 6vw;
+    width: 6vw;
 
     margin-right: 5%;
 }
 
 .header-items-wrapper > p {
-    font-size: 6vmax;
+    font-size: 7vw;
 
     margin: 0;
 }
@@ -72,14 +67,14 @@
 }
 
 .feed-user-name {
-    font-size: 3vmax;
+    font-size: 4vw;
     font-weight: bold;
 }
 
 .user-page-img-btn {
     border-radius: 50%;
-    height: 40px;
-    width: 40px;
+    height: 7vw;
+    width: 7vw;
 
     background-image: url("../images/무민.jfif");
     background-size: cover;
@@ -112,9 +107,9 @@
     background-color: white;
 }
 
-#home-btn {
-    height: 30px;
-    width: 30px;
+.home-btn {
+    height: 6vw;
+    width: 6vw;
 
     background-image: url("../images/home@3x.png");
     background-position: center;
@@ -125,9 +120,9 @@
     background-color: transparent;
 }
 
-#search-btn {
-    height: 30px;
-    width: 30px;
+.search-btn {
+    height: 6vw;
+    width: 6vw;
 
     background-image: url("../images/search@3x.png");
     background-position: center;
@@ -138,9 +133,9 @@
     background-color: transparent;
 }
 
-#plus-btn {
-    height: 40px;
-    width: 40px;
+.plus-btn {
+    height: 7vw;
+    width: 7vw;
 
     background-image: url("../images/plus.png");
     background-position: center;
@@ -152,8 +147,8 @@
 }
 
 .favorite-btn {
-    height: 29px;
-    width: 32px;
+    height: 5.4vw;
+    width: 6vw;
 
     background-image: url("../images/like@3x.png");
     background-position: center;
@@ -164,10 +159,10 @@
     background-color: transparent;
 }
 
-#my-page-img-btn {
+.my-page-img-btn {
     border-radius: 50%;
-    height: 40px;
-    width: 40px;
+    height: 6vw;
+    width: 6vw;
 
     background-image: url("../images/무민.jfif");
     background-size: cover;
