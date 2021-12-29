@@ -57,7 +57,7 @@
     font-size: 20px;
     width: 200px;
     height: 40px;
-    padding: 0px 20px;
+    padding: 0 20px;
     border: 1px solid lightgray;
     outline: none;
 }
@@ -79,7 +79,7 @@
     font-size: 20px;
     width: 200px;
     height: 40px;
-    padding: 0px 20px;
+    padding: 0 20px;
     border: 1px solid lightgray;
     outline: none;
 }
@@ -98,7 +98,7 @@
     font-size: 20px;
     width: 200px;
     height: 40px;
-    padding: 0px 20px;
+    padding: 0 20px;
     border: 1px solid lightgray;
     outline: none;
 }
@@ -120,43 +120,20 @@
     font-size: 20px;
     width: 200px;
     height: 40px;
-    padding: 0px 20px;
+    padding: 0 20px;
     border: 1px solid lightgray;
     outline: none;
 }
 
 
-.btns {
-    margin-left: 25px;
-    margin-top: 40px;
+.signup_button {
+    margin-top: 30px;
     width: 80%;
-    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-
-}
 
 
-.login_button {
-    width: 100%;
-}
-
-.login_button button {
-    width: 80%;
-    height: 50px;
-    border: 0;
-    outline: none;
-    border-radius: 40px;
-    background-color: lightblue;
-    font-size: 20px;
-    color: white;
-    letter-spacing: 2px;
-}
-
-.signup_button {
-    width: 100%;
 }
 
 .signup_button button {
@@ -170,6 +147,43 @@
     color: white;
     letter-spacing: 2px;
 }
+
+.profile_container {
+    margin-top: 100px;
+    width: 350px;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+.image_preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+.preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+.upload_img_size {
+    visibility: hidden;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+}
+
+
+
+
 
 @media (max-width: 480px) {
     .container {
