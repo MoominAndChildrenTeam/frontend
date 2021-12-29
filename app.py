@@ -13,7 +13,7 @@ def main():
 def detail():
     return render_template("sign-in.html")
 
-@app.route('/sign-up')
+@app.route('/sign_up')
 def detail():
     return render_template("sign-up.html")
 

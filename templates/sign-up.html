@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../static/sign_up.css">
     <title>moomingram</title>
+
 </head>
 <body>
     <div class="container">
@@ -46,33 +47,22 @@
             </div>
 
 
-            <div class="image-upload" id="image-upload">
-
-                <form method="post" enctype="multipart/form-data">
-                    <div class="button">
-                        <label for="chooseFile">
-                            👉 CLICK HERE! 👈
-                        </label>
-                    </div>
-                    <input type="file" id="chooseFile" name="chooseFile" accept="image/*" onchange="loadFile(this)">
-                </form>
-
-                <div class="fileContainer">
-                    <div class="fileInput">
-                        <p>FILE NAME: </p>
-                        <p id="fileName"></p>
-                    </div>
-                    <div class="buttonContainer">
-                        <div class="submitButton" id="submitButton">SUBMIT</div>
-                    </div>
+            <div class="profile_container">
+                <div class="image_preview">
+                    <div class="preveiw" id="preveiw_container"></div>
+                    <img class="upload_img_size" src="../images/upload.png">
                 </div>
+                <input type="file" id="image" class="image_file" accept="image/*" onchange="setThumbnail(event);"/>
+                <button class="browse_button">UPLOAD IMAGE</button>
+
             </div>
 
-            <div class="image-show" id="image-show"></div>
+
+
 
 
         </div>
     </div>
-
+<script src="../static/sign-up.js"></script>
 </body>
 </html>
