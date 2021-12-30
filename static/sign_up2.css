@@ -15,6 +15,18 @@
     flex-direction: column;
     background: rgba(0, 0, 0, 0.1);
 }
+.email_confirm {
+    margin-top: 20vw;
+    background-color: white;
+    width: 80%;
+    height: 80vw;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
 .email_cinfirm_text {
     font-size: 10vw;
     color: grey;
