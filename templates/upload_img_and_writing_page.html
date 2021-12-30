@@ -5,19 +5,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../static/upload_img_and_writing_page_style.css">
     <title>moomingram</title>
+
 </head>
 <body>
-    <div class='header'>
+    <div class="header">
         <button class=back-btn><img class="back" src="../images/back@3x.png"></button>
-        <p id=nickname><b>POSTing</b></p>
+        <p id="posting_text"><b>POSTing</b></p>
         <button class=upload-btn><img class='upload' src="../images/plus.png"></button>
     </div>
-    <div class='screen'>
+    <div class="screen">
         <div class="img-container">
-            <input class="upload-img-file" type="file">
+            <div id="drop-file" class="drag-file">
+                <label class="file-label" for="chooseFile"><img src="../images/upload.png" alt="파일 아이콘"
+                                                                class="image"></label>
+                <input class="file" id="chooseFile" type="file" onchange="dropFile.handleFiles(this.files)"
+                       accept="image/png, image/jpeg, image/gif">
+
+                <img src="" alt="미리보기 이미지" class="preview">
+            </div>
+
         </div>
         <div class="writing-container">
-                <input class="writing-box" placeholder="글을 입력하세요" />
+            <div class="content_text">CONTENT</div>
+            <textarea name="content" id="feed_content" placeholder="게시글을 작성해주세요." required></textarea>
         </div>
     </div>
     <div class="mobile-footer">
@@ -27,5 +37,6 @@
         <button class="favorite-btn"></button>
         <button class="my-page-img-btn"></button>
     </div>
+    <script src="../static/upload_img_and_writing_page.js"></script>
 </body>
 </html>

@@ -11,11 +11,11 @@
     border-bottom-color: lightgrey;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-around;
     height: 15vw;
-    padding-left: 5vw;
     position: fixed;
     background-color: white;
+    padding-left: 5vw;
 }
 
 .mobile-footer {
@@ -45,47 +45,38 @@
 }
 
 .img-container {
+    padding-top: 3vw;
+    padding-left: 2.2vw;
     width: 100%;
     height: 80vw;
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.upload-img-file {
-    width: 100%;
-    height: 100%;
-
-    background-image: url("../images/upload.png");
-    background-position: center;
-    background-size: 20vw;
-    background-repeat: no-repeat;
-    background-color: rgba(211, 211, 211, 0.3);
-
-    border: none;
-
-    display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
+
 
 .writing-container {
+    padding-top: 5vw;
     width : 100%;
-    height: 30vw;
+    height: 50vw;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: flex-start;
+    padding-left: 5vw;
+}
+.content_text {
+    font-size: 6vw;
+}
+#feed_content {
+    width: 90%;
+    height: 40vw;
+    font-size: 4vw;
 }
 
-.writing-box {
-    width: 100%;
-    height: 100%;
 
-    border: none;
-}
-
-#nickname {
+#posting_text {
     margin-left: 3vw;
     font-size: 7vw;
 }
@@ -101,7 +92,7 @@
 
 .upload {
     margin: auto 15vw auto auto;
-    height: 6vw;
+    height: 7vw;
 }
 
 .screen {
@@ -180,4 +171,41 @@
 
     border: none;
     background-color: transparent;
+}
+
+.img-container .drag-file {
+    position: relative;
+    width: 100%;
+    height: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom-width: 0.1vh;
+    border-bottom-style: solid;
+    border-bottom-color: grey;
+
+}
+
+/*드래그해서 가져오면 빨간줄로 바뀌게하는것*/
+.img-container .drag-file.highlight {
+    border: 3px solid red;
+}
+
+/*선택하면 나올 이미지들*/
+.img-container .drag-file .preview {
+    display: none;
+    position: absolute;
+    left: 0;
+    height: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.img-container .file {
+    display: none;
+}
+.message {
+    color: grey;
+    font-size: 8vw;
 }
