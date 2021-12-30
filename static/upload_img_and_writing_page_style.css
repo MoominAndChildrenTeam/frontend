@@ -16,6 +16,7 @@
     position: fixed;
     background-color: white;
     padding-left: 5vw;
+    z-index: 10;
 }
 
 .mobile-footer {
