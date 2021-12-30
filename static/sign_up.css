@@ -6,36 +6,36 @@
 }
 
 .logo {
-    width: 100px;
+    width: 30vw;
 }
 
 .container {
     width: 100%;
     margin: 0 auto;
-    height: 900px;
+    height: 230vw;
     display: flex;
     justify-content: center;
-    padding-top: 50px;
     background: rgba(0, 0, 0, 0.1);
 }
 .signup_upper_part{
-    width: 350px;
-    height: 150px;
+    width: 100%;
+    height: 50vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
 }
 
-.sign_in_text {
-    font-size: 30px;
+.sign_up_text {
+    font-size: 10vw;
     color: grey;
 }
 
 .signup {
+    margin-top: 20vw;
     background-color: white;
-    width: 90%;
-    height: 800px;
+    width: 80%;
+    height: 200vw;
     border-radius: 20px;
     display: flex;
     justify-content: flex-start;
@@ -101,16 +101,6 @@
     padding: 0 20px;
     border: 1px solid lightgray;
     outline: none;
-}
-.confirm_check {
-    color: green;
-    font-size: 25px;
-    display: none;
-}
-.no_confirm_check {
-    color: red;
-    font-size: 25px;
-    display: none;
 }
 .signup_nickname {
     margin-top: 15px;
