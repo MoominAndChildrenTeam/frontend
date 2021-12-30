@@ -11,7 +11,7 @@ def main():
 
 @app.route('/sign-up')
 def detail():
-    return render_template("sign-up.html")
+    return render_template("sign_up.html")
 
 
 if __name__ == '__main__':

@@ -3,24 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../static/favorite_page_style.css">
+    <link rel="stylesheet" href="../static/upload_img_and_writing_page_style.css">
     <title>moomingram</title>
 </head>
 <body>
     <div class='header'>
-        <button class=back-btn><img class="back" src="../images/back@3x.png" alt="뒤로가기 버튼"></button>
-        <p id=nickname><b>저장한 페이지</b></p>
+        <button class=back-btn><img class="back" src="../images/back@3x.png"></button>
+        <p id=nickname><b>POSTing</b></p>
+        <button class=upload-btn><img class='upload' src="../images/plus.png"></button>
     </div>
     <div class='screen'>
-        <div class="favorite-feed">
-        <div class="user-name-and-img">
-            <div class="feed-user-img">
-                <button class="user-page-img-btn"></button>
-            </div>
-            <p class="feed-user-name">nickname</p>
+        <div class="img-container">
+            <input class="upload-img-file" type="file">
         </div>
-        <img src="https://t1.daumcdn.net/cfile/tistory/9919334E5B28A1E331">
-    </div>
+        <div class="writing-container">
+                <input class="writing-box" placeholder="글을 입력하세요" />
+        </div>
     </div>
     <div class="mobile-footer">
         <button class="home-btn"></button>

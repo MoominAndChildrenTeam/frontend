@@ -2,10 +2,6 @@
     font-family: 'Dongle', sans-serif;
 }
 
-body {
-    margin: 0;
-}
-
 .header {
     top: 0;
     left: 0;
@@ -38,46 +34,75 @@ body {
     background-color: white;
 }
 
-.favorite-feed {
-    display: flex;
-    flex-direction: column;
-
-    width: 100%;
+.my-page-img {
+    border-radius: 50%;
+    height: 10vw;
+    width: 10vw;
 }
 
-.user-name-and-img {
+.back {
+    height: 6vw;
+}
+
+.img-container {
+    width: 100%;
+    height: 80vw;
     display: flex;
-    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-img-file {
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../images/upload.png");
+    background-position: center;
+    background-size: 20vw;
+    background-repeat: no-repeat;
+    background-color: rgba(211, 211, 211, 0.3);
+
+    border: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
-.feed-user-img {
-    margin: 1% 2%;
+.writing-container {
+    width : 100%;
+    height: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-.feed-user-name {
-    font-size: 4vw;
-    font-weight: bold;
-}
-
-.user-page-img-btn {
-    border-radius: 50%;
-    height: 7vw;
-    width: 7vw;
-
-    background-image: url("../images/무민.jfif");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.writing-box {
+    width: 100%;
+    height: 100%;
 
     border: none;
-    background-color: transparent;
 }
 
-.favorite-feed > img {
-    width: 100%;
+#nickname {
+    margin-left: 3vw;
+    font-size: 7vw;
 }
 
+.upload-btn {
+    margin: auto 12vw auto auto;
+    height: 6vw;
+    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-style: none;
+    width: 7vw;
+}
+
+.upload {
+    margin: auto 15vw auto auto;
+    height: 6vw;
+}
 
 .screen {
     width: 100%;
@@ -87,18 +112,8 @@ body {
 
 .back-btn {
     border-style: none;
-    background-color: transparent;
-
-    margin-right: 2%;
-}
-
-.back {
-    height: 6vw;
-    width: 6vw;
-}
-
-#nickname {
-    font-size: 7vw;
+    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .home-btn {
