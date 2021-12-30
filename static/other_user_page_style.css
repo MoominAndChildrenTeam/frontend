@@ -82,19 +82,6 @@
             font-size: xx-large;
         }
 
-        .settingbtn {
-            margin: auto 12vw auto auto;
-            height: 6vw;
-            background-color: #ffffff;
-            background-color: rgba( 255, 255, 255, 0.5 );
-            border-style: none;
-            width : 7vw;
-        }
-        .setting{
-            margin: auto 15vw auto auto;
-            height: 6vw;
-        }
-
         .feed {
             width: 100%;
             display: flex;
