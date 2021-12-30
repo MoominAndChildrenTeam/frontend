@@ -2,49 +2,40 @@
     font-family: 'Dongle', sans-serif;
 }
 
-.whole-screen {
+body {
     margin: 0;
 }
 
 .header {
-    border-bottom: 0.1vh solid lightgrey;
-
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom-width: 0.1vh;
+    border-bottom-style: solid;
+    border-bottom-color: lightgrey;
     display: flex;
     align-items: center;
-
+    justify-content: flex-start;
     height: 15vw;
-
-    width: 100%;
-
-    padding-left: 5%;
+    padding-left: 5vw;
+    position: fixed;
+    background-color: white;
 }
 
-.header-items-wrapper {
+.mobile-footer {
+    border-top-width: 0.1vh;
+    border-top-style: solid;
+    border-top-color: lightgrey;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 21vw;
     display: flex;
     flex-direction: row;
     align-items: center;
-
-    width: 100%;
-}
-
-.back-btn {
-    background-color: transparent;
-    border: none;
-    background-image: url("../images/back@3x.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-
-    height: 6vw;
-    width: 6vw;
-
-    margin-right: 5%;
-}
-
-.header-items-wrapper > p {
-    font-size: 7vw;
-
-    margin: 0;
+    justify-content: space-around;
+    background-color: white;
 }
 
 .favorite-feed {
@@ -58,12 +49,10 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-
-    margin: 2% 4% 0 4%;
 }
 
 .feed-user-img {
-    margin-right: 2%;
+    margin: 1% 2%;
 }
 
 .feed-user-name {
@@ -89,22 +78,27 @@
     width: 100%;
 }
 
-.mobile-footer {
-    border-top: 0.1vh solid lightgrey;
 
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    margin: 0 auto;
-    height: 20vw;
+.screen {
     width: 100%;
+    padding-top: 15vw;
+    padding-bottom: 20vw;
+}
 
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+.back-btn {
+    border-style: none;
+    background-color: transparent;
 
-    background-color: white;
+    margin-right: 2%;
+}
+
+.back {
+    height: 6vw;
+    width: 6vw;
+}
+
+#nickname {
+    font-size: 7vw;
 }
 
 .home-btn {
@@ -172,4 +166,3 @@
     border: none;
     background-color: transparent;
 }
-

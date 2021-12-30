@@ -171,13 +171,12 @@
     flex-direction: row;
     align-items: center;
 
-    margin: 2% 4% 0 4%;
-
     width: 100%;
 }
 
 .feed-user-img {
-    margin-right: 2%;
+    margin: 1% 2%;
+
 }
 
 .feed-user-name {
