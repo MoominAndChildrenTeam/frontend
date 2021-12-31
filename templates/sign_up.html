@@ -19,26 +19,36 @@
             </div>
 
             <div class="signup_id">
-                <h4>E-MAil :</h4>
-                <input type="email" placeholder="enter your email">
-                <div class="email_confirm_button">
-                    <button>이메일 인증</button>
+                <h4>E-MAil</h4>
+                <div class="input_part">
+                    <input type="email" placeholder="enter your email">
+                    <div class="email_confirm_button">
+                        <button>이메일 인증</button>
+                    </div>
                 </div>
+
             </div>
             <div class="signup_pw">
-                <h4>PW : </h4>
+                <h4>PW</h4>
                 <input type="password" id="password1" onchange="check_pw()" placeholder="enter your password">
             </div>
             <div class="signup_pw_confirm">
-                <h4>PW-confirm : </h4>
-                <input  type="password" id="password2" placeholder="confirm your password"onchange="check_pw()">&nbsp;<span id="check"></span>
+                <h4>PW-confirm</h4>
+                <div class="input_pw_part">
+                    <input type="password" id="password2" placeholder="confirm your password"
+                           onchange="check_pw()"><span
+                        id="check"></span>
+                </div>
             </div>
             <div class="signup_nickname">
-                <h4>NICKNAME : </h4>
-                <input type="nickname" placeholder="enter your nickname">
-                <div class="nickname_confirm_button">
-                    <button>중복 확인</button>
+                <h4>NICKNAME</h4>
+                <div class="input_part">
+                    <input type="text" placeholder="enter your nickname">
+                    <div class="nickname_confirm_button">
+                        <button>중복 확인</button>
+                    </div>
                 </div>
+
             </div>
             <div class="upload-box">
                 <div id="drop-file" class="drag-file">
@@ -53,8 +63,6 @@
             <div class="signup_button">
                 <button type="submit" value="submit"> Sign Up</button>
             </div>
-
-
 
 
         </div>
