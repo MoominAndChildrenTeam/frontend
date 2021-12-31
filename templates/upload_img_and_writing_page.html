@@ -10,16 +10,15 @@
 </head>
 <body>
     <div class="header">
-        <button class=back-btn><img class="back" src="../images/back@3x.png"></button>
+        <img class="back-img" src="../images/back@3x.png">
         <p id="posting_text"><b>POSTing</b></p>
-        <button class=upload-btn><img class='upload' src="../images/plus.png"></button>
+        <img class='upload_image' src="../images/plus.png">
     </div>
     <div class="screen">
         <div class="img-container">
             <div id="drop-file" class="drag-file">
                 <label class="file-label" for="chooseFile">
-                    <img src="../images/upload.png" alt="파일 아이콘"
-                                                                class="image"></label>
+                    <img src="../images/upload.png" alt="파일 아이콘" class="image"></label>
                 <input class="file" id="chooseFile" type="file" onchange="dropFile.handleFiles(this.files)"
                        accept="image/png, image/jpeg, image/gif">
 

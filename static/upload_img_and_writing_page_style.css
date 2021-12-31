@@ -41,9 +41,6 @@
     width: 10vw;
 }
 
-.back {
-    height: 6vw;
-}
 
 .img-container {
     padding-top: 3vw;
@@ -82,18 +79,10 @@
     font-size: 7vw;
 }
 
-.upload-btn {
+.upload_image {
     margin: auto 12vw auto auto;
-    height: 6vw;
-    background-color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-style: none;
-    width: 7vw;
-}
-
-.upload {
-    margin: auto 15vw auto auto;
-    height: 7vw;
+    height: 8vw;
+    width: 8vw;
 }
 
 .screen {
@@ -102,10 +91,8 @@
     padding-bottom: 20vw;
 }
 
-.back-btn {
-    border-style: none;
-    background-color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.5);
+.back-img {
+    height: 6vw;
 }
 
 .home-btn {
@@ -186,6 +173,9 @@
     border-bottom-style: solid;
     border-bottom-color: grey;
 
+}
+.image {
+    width:40vw;
 }
 
 /*드래그해서 가져오면 빨간줄로 바뀌게하는것*/

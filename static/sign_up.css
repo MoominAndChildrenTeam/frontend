@@ -12,7 +12,7 @@
 .container {
     width: 100%;
     margin: 0 auto;
-    height: 230vw;
+    height: 300vw;
     display: flex;
     justify-content: center;
     background: rgba(0, 0, 0, 0.1);
@@ -35,95 +35,123 @@
     margin-top: 20vw;
     background-color: white;
     width: 80%;
-    height: 200vw;
+    height: 250vw;
     border-radius: 20px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 25px;
 }
 
 .signup_id {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    width: 300px;
-    font-size: 20px;
+    margin-left: 13vw;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    font-size: 6vw;
 }
 
 .signup_id input {
-    font-size: 20px;
-    width: 200px;
-    height: 40px;
-    padding: 0 20px;
+    margin-left: 3vw;
+    font-size: 6vw;
+    width: 50vw;
+    height: 12vw;
+    padding: 0 4vw;
     border: 1px solid lightgray;
     outline: none;
 }
 
 
 .signup_pw {
-    margin-top: 15px;
-    margin-left: 10px;
+    margin-top: 5vw;
+    margin-left: 13vw;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    width: 300px;
-    font-size: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    font-size: 6vw;
 }
 
 .signup_pw input {
-    margin-right: 30px;
-    font-size: 20px;
-    width: 200px;
-    height: 40px;
-    padding: 0 20px;
+    margin-left: 3vw;
+    font-size: 6vw;
+    width: 50vw;
+    height: 12vw;
+    padding: 0 4vw;
     border: 1px solid lightgray;
     outline: none;
 }
 .signup_pw_confirm {
-    padding-right: 39px;
-    margin-top: 15px;
+    margin-top: 5vw;
+    margin-left: 13vw;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    width: 360px;
-    font-size: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    font-size: 6vw;
 }
 
 .signup_pw_confirm input {
-    font-size: 20px;
-    width: 200px;
-    height: 40px;
-    padding: 0 20px;
+    margin-left: 3vw;
+    font-size: 5vw;
+    width: 50vw;
+    height: 12vw;
+    padding: 0 4vw;
     border: 1px solid lightgray;
     outline: none;
 }
 .signup_nickname {
-    margin-top: 15px;
+    margin-top: 6vw;
+    margin-left: 13vw;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row;
-    width: 340px;
-    font-size: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    font-size: 6vw;
 }
 
 .signup_nickname input {
-    font-size: 20px;
-    width: 200px;
-    height: 40px;
-    padding: 0 20px;
+    margin-left: 3vw;
+    font-size: 5vw;
+    width: 50vw;
+    height: 12vw;
+    padding: 0 4vw;
     border: 1px solid lightgray;
     outline: none;
 }
-
+.input_part {
+    width: 88%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.input_part button {
+    width: 15vw;
+    height: 8vw;
+    border: 0;
+    outline: none;
+    border-radius: 10px;
+    background-color: lightblue;
+    font-size: 3vw;
+    color: white;
+    letter-spacing: 0.5vw;
+}
+.input_pw_part {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
 
 .signup_button {
-    margin-top: 30px;
+    margin-top: 10vw;
     width: 80%;
     display: flex;
     justify-content: center;
@@ -134,22 +162,21 @@
 
 .signup_button button {
     width: 80%;
-    height: 50px;
+    height: 15vw;
     border: 0;
     outline: none;
     border-radius: 40px;
     background-color: lightblue;
-    font-size: 20px;
+    font-size: 6vw;
     color: white;
-    letter-spacing: 2px;
+    letter-spacing: 1vw;
 }
 
 
 .upload-box {
-    margin-top: 30px;
-    width: 80%;
+    margin-top: 15vw;
+    width: 100%;
     height: 40vw;
-    margin-right: 30px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -159,8 +186,8 @@
 /*점선테두리박스안에것들*/
 .upload-box .drag-file {
     position: relative;
-    width: 30vw;
-    height: 30vw;
+    width: 40vw;
+    height: 40vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -174,11 +201,12 @@
 }
 /*업로드이미지 - 아이콘*/
 .upload-box .drag-file .image {
-    width: 40px;
+    width: 20vw;
 }
 /*Drag files to upload 글씨*/
 .upload-box .drag-file .message {
-    margin-bottom: 0;
+   font-size: 4vw;
+    color: grey;
 }
 /*선택하면 나올 이미지들*/
 .upload-box .drag-file .preview {
@@ -192,9 +220,9 @@
 }
 /*파일 업로드 선택 버튼*/
 .upload-box .file-label {
-    margin-top: 30px;
-    text-align: center;
-    padding: 2vw 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     width: 30vw;
     height: 10vw;
@@ -202,9 +230,9 @@
     outline: none;
     border-radius: 10px;
     background-color: gainsboro;
-    font-size: 20px;
+    font-size: 3vw;
     color: white;
-    letter-spacing: 2px;
+    letter-spacing: 0.5vw;
 }
 /*못생긴 파일업로드버튼과 이름*/
 .upload-box .file {
