@@ -62,3 +62,7 @@ function DropFile(dropAreaId, fileListId) {
 }
 
 const dropFile = new DropFile("drop-file", "files");
+
+function returnpage(){
+                window.history.go(-1);
+}

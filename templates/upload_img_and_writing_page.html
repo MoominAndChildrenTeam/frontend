@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../static/upload_img_and_writing_page_style.css">
+    <script defer src="../static/upload_img_and_writing_page.js"></script>
     <title>moomingram</title>
 
 </head>
 <body>
     <div class="header">
-        <img class="back-img" src="../images/back@3x.png">
+        <img class="back-img" onclick="returnpage()" src="../images/back@3x.png">
         <p id="posting_text"><b>POSTing</b></p>
         <img class='upload_image' src="../images/plus.png">
     </div>
@@ -38,6 +39,5 @@
         <button class="favorite-btn"></button>
         <button class="my-page-img-btn"></button>
     </div>
-    <script src="../static/upload_img_and_writing_page.js"></script>
 </body>
 </html>

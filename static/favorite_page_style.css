@@ -85,16 +85,8 @@ body {
     padding-bottom: 20vw;
 }
 
-.back-btn {
-    border-style: none;
-    background-color: transparent;
-
-    margin-right: 2%;
-}
-
-.back {
+.back-img {
     height: 6vw;
-    width: 6vw;
 }
 
 #nickname {
