@@ -6,19 +6,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../static/favorite_page_style.css">
     <title>moomingram</title>
-    <script type="text/javascript" src="../static/favorite_page_funtion.js"></script>
+    <script type="text/javascript" src="../static/favorite_page_function.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <div class='header'>
-        <img class="back-img" onclick="history.back()" src="../images/back@3x.png">
+        <img class="back-img" onclick="history.back()" src="../static/images/back@3x.png">
         <p id=nickname><b>저장한 페이지</b></p>
     </div>
     <div class='screen'>
         <div class="favorite-feed">
             <div class="user-name-and-img">
                 <div class="feed-user-img">
-                    <button class="user-page-img-btn" onclick="to_user_pg()"></button>
+                    <img onclick="to_user_pg()" class="user-page-img-btn" src="../static/images/무민.jfif"/>
                 </div>
                 <p class="feed-user-name">nickname</p>
             </div>
@@ -26,11 +26,13 @@
         </div>
     </div>
     <div class="mobile-footer">
-        <button class="home-btn" onclick="to_main()"></button>
-        <button class="search-btn" onclick="to_search()"></button>
-        <button class="plus-btn" onclick="to_upload()"></button>
-        <button class="favorite-btn" onclick="to_favorite()"></button>
-        <button class="my-page-img-btn" onclick="to_my_pg()"></button>
+        <div class="mobile-footer">
+        <img class="home-btn" src="../static/images/home@3x.png" onclick="to_main()">
+        <img class="search-btn" src="../static/images/search@3x.png" onclick="to_search()">
+        <img class="plus-btn" src="../static/images/plus.png" onclick="to_upload()">
+        <img class="favorite-btn" src="../static/images/like@3x.png" onclick="to_favorite()">
+        <img class="my-page-img-btn" src="../static/images/무민.jfif" onclick="to_my_pg()">
+    </div>
     </div>
 </body>
 </html>

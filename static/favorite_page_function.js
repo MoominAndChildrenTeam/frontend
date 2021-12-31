@@ -15,7 +15,7 @@ function show_favorite_feed() {
                 let feed_user_uploaded_picture = favorite_feeds[i]['feed_user_uploaded_picture']
 
                 let get_data_cnt = 0
-                let temp_html = `<div id="favorite_feed" class="favorite-feed">
+                let temp_html = `<div class="favorite-feed">
                                      <div class="user-name-and-img">
                                         <div class="feed-user-img">
                                             <button class="user-page-img-btn">
@@ -26,7 +26,7 @@ function show_favorite_feed() {
                                      </div>
                                      <img src="${feed_user_uploaded_picture}">
                                  </div>`
-                $('#favorite_feed').append(temp_html)
+                $('.screen').append(temp_html)
                 get_data_cnt += 1
 
                 if (get_data_cnt > 3) {
@@ -37,6 +37,7 @@ function show_favorite_feed() {
         }
     })
 }
+
 
 function to_main() {
     location.href = "main_page.html"
