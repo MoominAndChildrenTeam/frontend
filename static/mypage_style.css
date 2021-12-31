@@ -44,7 +44,10 @@
             height: 6vw;
             object-fit: cover;
         }
-
+        .icon3 {
+            height: 10vw;
+            object-fit: cover;
+        }
         .back-img {
             height: 6vw;
         }

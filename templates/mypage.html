@@ -6,17 +6,7 @@
     <link rel="stylesheet" href="../static/mypage_style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>moomingram</title>
-    <script>
-            function returnpage(){
-                window.history.go(-1);
-            }
-            function  reload(){
-                location.reload()
-            }
-            function movepage(){
-                location.href='https://www.naver.com'
-            }
-    </script>
+    <script defer src="../static/mypage.js"></script>
 </head>
 <body>
         <div class='header'>
@@ -67,7 +57,7 @@
     <div class="mobile-footer">
         <img class="icon2" onclick="movepage()" src="../images/home@3x.png">
         <img class="icon2" src="../images/search@3x.png">
-        <img class="icon2" onclick="movepage()" src="../images/trending@3x.png">
+        <img class="icon3" onclick="movepage()" src="../images/plus.png">
         <img class="icon2" onclick="movepage()" src="../images/like@3x.png">
         <img class="my-page-img" onclick="movepage()" src="../images/무민.jfif">
     </div>
