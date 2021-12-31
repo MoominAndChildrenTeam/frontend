@@ -66,3 +66,27 @@ const dropFile = new DropFile("drop-file", "files");
 function returnpage(){
                 window.history.go(-1);
 }
+
+//업로드 버튼 누를때 파일 전송하는 함수
+function posting() {
+  let content = $('#feed_image_file').val()
+  let file = $('#file')[0].files[0]
+  let form_data = new FormData()
+
+  form_data.append("comment_give", content)
+  form_data.append("file_give", file)
+
+  $ajax({
+    type: "POST",
+    url: "/fileupload",
+    data: form_data,
+    cache: false,
+    contentType: false,
+    processData: false,
+    success: function (response) {
+      alert(response["result"])
+      window.location.reload()
+    }
+  });
+}
+

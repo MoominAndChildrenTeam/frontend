@@ -99,7 +99,7 @@
     height: 6vw;
     width: 6vw;
 
-    background-image: url("../images/home@3x.png");
+    background-image: url("../static/images/home@3x.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -112,7 +112,7 @@
     height: 6vw;
     width: 6vw;
 
-    background-image: url("../images/search@3x.png");
+    background-image: url("../static/images/search@3x.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -125,7 +125,7 @@
     height: 7vw;
     width: 7vw;
 
-    background-image: url("../images/plus.png");
+    background-image: url("../static/images/plus.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -138,7 +138,7 @@
     height: 5.4vw;
     width: 6vw;
 
-    background-image: url("../images/like@3x.png");
+    background-image: url("../static/images/like@3x.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -152,7 +152,7 @@
     height: 6vw;
     width: 6vw;
 
-    background-image: url("../images/무민.jfif");
+    background-image: url("../static/images/무민.jfif");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
