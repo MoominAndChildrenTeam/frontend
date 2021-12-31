@@ -97,7 +97,7 @@ function to_main() {
 }
 
 function to_search() {
-    location.href = '../templates/search_page.html'
+    location.href = '../../search_page/templates/search_page.html'
 }
 
 function to_upload() {
@@ -105,14 +105,14 @@ function to_upload() {
 }
 
 function to_favorite() {
-    location.href = "../templates/favorite_page.html"
+    location.href = "../../favorite_page/templates/favorite_page.html"
 }
 
 function to_my_pg() {
-    location.href = "../templates/mypage.html"
+    location.href = "../../my_page/templates/mypage.html"
 }
 
 function to_user_pg() {
-    location.href = '../templates/other_user_page.html'
+    location.href = '../../other_user_page/templates/other_user_page.html'
 }
 
