@@ -1,3 +1,7 @@
+$(document).ready(function () {
+            get_mypage()
+        });
+
 function returnpage(){
                 window.history.go(-1);
 }
@@ -7,17 +11,21 @@ function  reload(){
 function movepage(){
     location.href='https://www.naver.com'
 }
-function feed_count(){
-     let feed_count = $('#feed').val()
-
-            $.ajax({
-                type: 'GET',
-                url: '/',
-                data: {name_give: name, comment_give: comment},
+function get_mypage(){
+             $.ajax({
+                type: "GET",
+                url: "/my_page",
+                data: {},
                 success: function (response) {
-                    alert(response['msg'])
-                    console.log(response)
-                    window.location.reload()
+                        let name = ['name']
+                        let follower = ['follower']
+                        let following = ['following']
+                        let profile_img =
+
+                        let temp_name = `<b>${name}</b>`
+                        let temp_wrapper = ``
+                        $('#nickname').append(temp_name)
+
                 }
-            })
+            });
 }
