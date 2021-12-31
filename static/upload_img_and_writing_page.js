@@ -69,13 +69,15 @@ function returnpage(){
 
 //업로드 버튼 누를때 파일 전송하는 함수
 function posting() {
-  let content = $('#feed_image_file').val()
-  let file = $('#file')[0].files[0]
+  let content = $('#feed_content').val()
+  let file = $('#feed_image_file')[0].files[0]
   let form_data = new FormData()
 
   form_data.append("comment_give", content)
   form_data.append("file_give", file)
 
+  location.href = "main_page.html"
+  alert('게시글이 업로드 되었습니다.')
   $ajax({
     type: "POST",
     url: "/fileupload",
@@ -88,5 +90,29 @@ function posting() {
       window.location.reload()
     }
   });
+}
+
+function to_main() {
+    location.href = "main_page.html"
+}
+
+function to_search() {
+    location.href = '../templates/search_page.html'
+}
+
+function to_upload() {
+    location.href = '../templates/upload_img_and_writing_page.html'
+}
+
+function to_favorite() {
+    location.href = "../templates/favorite_page.html"
+}
+
+function to_my_pg() {
+    location.href = "../templates/mypage.html"
+}
+
+function to_user_pg() {
+    location.href = '../templates/other_user_page.html'
 }
 
