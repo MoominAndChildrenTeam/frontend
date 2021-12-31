@@ -22,20 +22,8 @@
     top: 0;
     left: 0;
 }
-/*
-.header-items-wrapper {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
 
-    width: 100%;
-
-    padding-right: 8%;
-}
-*/
-
-.empty-box {
+.empty-box-for-adjust-distance {
     height: 6vw;
     width: 7vw;
 }
@@ -48,7 +36,6 @@
 .logo-img {
     width: 40vw;
     height: 15vw;
-
 }
 
 .story {
