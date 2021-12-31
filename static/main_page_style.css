@@ -73,71 +73,10 @@
     font-size: 3vw;
 }
 
-.user1-story-img-btn {
+.user-story-img-btn {
     border-radius: 50%;
-    height: 9vw;
-    width: 9vw;
-
-    background-image: url("../images/무민.jfif");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    border: none;
-    background-color: transparent;
-}
-
-.user2-story-img-btn {
-    border-radius: 50%;
-    height: 9vw;
-    width: 9vw;
-
-    background-image: url("../images/무민.jfif");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    border: none;
-    background-color: transparent;
-}
-
-.user3-story-img-btn {
-    border-radius: 50%;
-    height: 9vw;
-    width: 9vw;
-
-    background-image: url("../images/무민.jfif");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    border: none;
-    background-color: transparent;
-}
-
-.user4-story-img-btn {
-    border-radius: 50%;
-    height: 9vw;
-    width: 9vw;
-
-    background-image: url("../images/무민.jfif");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    border: none;
-    background-color: transparent;
-}
-
-.user5-story-img-btn {
-    border-radius: 50%;
-    height: 9vw;
-    width: 9vw;
-
-    background-image: url("../images/무민.jfif");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    height: 10vw;
+    width: 10vw;
 
     border: none;
     background-color: transparent;
@@ -175,11 +114,6 @@
     height: 7vw;
     width: 7vw;
 
-    background-image: url("../images/무민.jfif");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
     border: none;
     background-color: transparent;
 }
@@ -199,15 +133,28 @@
 
 .comment-btn {
     height: 6vw;
-    width: 6vw;
+}
 
-    background-image: url("../images/comment@3x.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.feed-content-box {
+    display: flex;
+    flex-direction: column;
 
-    border: none;
-    background-color: transparent;
+    padding-left: 3%;
+}
+
+.feed-user-name-of-content {
+    font-weight: bold;
+    font-size: 4vw;
+
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.feed-content {
+    font-size: 4vw;
+
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .user-comment-wrapper {
@@ -215,20 +162,24 @@
     flex-direction: row;
     align-items: center;
 
-    padding-left: 5%;
+    padding-left: 3%;
 }
 
 .comment-user-name {
-    margin-top: 0;
-    margin-right: 2%;
+    margin: 0 2% 2% 0;
 
     font-weight: bold;
     font-size: 3vw;
 }
 
 .comment {
-    margin-top: 0;
+    margin-top: 2%;
+    padding: 0;
+    width: 100%;
+
     font-size: 3vw;
+
+    border: none;
 }
 
 .feed-time-wrapper {
@@ -236,7 +187,7 @@
     flex-direction: column;
     justify-content: flex-end;
 
-    padding-left: 5%;
+    padding-left: 3%;
 }
 
 .feed-time {
@@ -267,66 +218,22 @@
 
 .home-btn {
     height: 6vw;
-    width: 6vw;
-
-    background-image: url("../images/home@3x.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    border: none;
-    background-color: transparent;
 }
 
 .search-btn {
     height: 6vw;
-    width: 6vw;
-
-    background-image: url("../images/search@3x.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    border: none;
-    background-color: transparent;
 }
 
 .plus-btn {
-    height: 7vw;
-    width: 7vw;
-
-    background-image: url("../images/plus.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    border: none;
-    background-color: transparent;
+    height: 10vw;
 }
 
 .favorite-btn {
-    height: 5.4vw;
-    width: 6vw;
-
-    background-image: url("../images/like@3x.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    border: none;
-    background-color: transparent;
+    height: 6vw;
 }
 
 .my-page-img-btn {
     border-radius: 50%;
-    height: 6vw;
-    width: 6vw;
-
-    background-image: url("../images/무민.jfif");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    border: none;
-    background-color: transparent;
+    height: 10vw;
+    width: 10vw;
 }
