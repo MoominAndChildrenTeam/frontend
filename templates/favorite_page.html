@@ -2,32 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../static/favorite_page_style.css">
     <title>moomingram</title>
+    <script type="text/javascript" src="../static/favorite_page_funtion.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <div class='header'>
-        <button class=back-btn><img class="back" src="../images/back@3x.png" alt="뒤로가기 버튼"></button>
+        <button class=back-btn onclick="history.back()">
+            <img class="back" src="../images/back@3x.png" alt="뒤로가기 버튼">
+        </button>
         <p id=nickname><b>저장한 페이지</b></p>
     </div>
     <div class='screen'>
         <div class="favorite-feed">
-        <div class="user-name-and-img">
-            <div class="feed-user-img">
-                <button class="user-page-img-btn"></button>
+            <div class="user-name-and-img">
+                <div class="feed-user-img">
+                    <button class="user-page-img-btn" onclick="to_user_pg()"></button>
+                </div>
+                <p class="feed-user-name">nickname</p>
             </div>
-            <p class="feed-user-name">nickname</p>
+            <img src="https://t1.daumcdn.net/cfile/tistory/9919334E5B28A1E331">
         </div>
-        <img src="https://t1.daumcdn.net/cfile/tistory/9919334E5B28A1E331">
-    </div>
     </div>
     <div class="mobile-footer">
-        <button class="home-btn"></button>
-        <button class="search-btn"></button>
-        <button class="plus-btn"></button>
-        <button class="favorite-btn"></button>
-        <button class="my-page-img-btn"></button>
+        <button class="home-btn" onclick="to_main()"></button>
+        <button class="search-btn" onclick="to_search()"></button>
+        <button class="plus-btn" onclick="to_upload()"></button>
+        <button class="favorite-btn" onclick="to_favorite()"></button>
+        <button class="my-page-img-btn" onclick="to_my_pg()"></button>
     </div>
 </body>
 </html>

@@ -6,18 +6,20 @@
     <title>moominstagram</title>
     <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300&display=swap" rel="stylesheet">
     <link href="../static/main_page_style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../static/main_page_function.js"></script>
 </head>
 <body class="whole-screen">
     <div class="header">
         <div class="header-items-wrapper">
-            <img class="logo-img" src="../images/moomingram.png">
-            <button class="camera-btn"></button>
+            <img class="logo-img" src="../images/moomingram.png" alt="무민그램 로고">
+            <button id="camara_btn" class="camera-btn"></button>
         </div>
     </div>
     <div class="story">
         <div class="users-stories">
             <div class="each-user-story">
-                <button class="user1-story-img-btn"></button>
+                <button class="user1-story-img-btn" onclick="to_user_pg()"></button>
                 <p class="user1-name">nickname</p>
             </div>
             <div class="each-user-story">
@@ -59,11 +61,11 @@
         </div>
     </div>
     <div class="mobile-footer">
-        <button class="home-btn"></button>
-        <button class="search-btn"></button>
-        <button class="plus-btn"></button>
-        <button class="favorite-btn"></button>
-        <button class="my-page-img-btn"></button>
+        <button id="home_btn" class="home-btn" onclick="to_main()"></button>
+        <button class="search-btn" onclick="to_search()"></button>
+        <button class="plus-btn" onclick="to_upload()"></button>
+        <button class="favorite-btn" onclick="to_favorite()"></button>
+        <button class="my-page-img-btn" onclick="to_my_pg()"></button>
     </div>
 </body>
 </html>
