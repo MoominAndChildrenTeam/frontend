@@ -69,31 +69,49 @@ function returnpage(){
 
 //업로드 버튼 누를때 파일 전송하는 함수
 function posting() {
-  let content = $('#feed_content').val()
-  let file = $('#feed_image_file')[0].files[0]
+  let date = new Date();
+  let year = date.getFullYear();
+  let month = date.getMonth() + 1;
+  let day = date.getDate();
+  let current_date = year + '.' + month + '.' + day
+  let comment = $('#feed_content').val()
+  let img = $('#feed_image_file')[0]
   let form_data = new FormData()
 
-  form_data.append("comment_give", content)
-  form_data.append("file_give", file)
+  form_data.append("comment_receive", comment)
+  form_data.append("filename", img)
+  form_data.append("date",current_date)
 
-  location.href = "main_page.html"
-  alert('게시글이 업로드 되었습니다.')
-  $ajax({
-    type: "POST",
-    url: "/fileupload",
-    data: form_data,
-    cache: false,
-    contentType: false,
-    processData: false,
-    success: function (response) {
-      alert(response["result"])
-      window.location.reload()
-    }
-  });
+  if(!img) {
+    alert('사진을 업로드해주세요')
+  } else {
+      $ajax({
+        type: "POST",
+        url: "/upload_page",
+        data: form_data,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function (response) {
+          alert(response["result"])
+          alert("게시글 업로드 완료!")
+          location.href = "../../main_page/templates/main_page.html"
+        },
+        error: function (request, status, error) {
+
+          alert("저장에 실패 했습니다.");
+
+          console.log("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);
+
+        }
+      });
+  }
+
+
 }
 
 function to_main() {
-    location.href = "main_page.html"
+    location.href = "../../main_page/templates/main_page.html"
 }
 
 function to_search() {
@@ -108,11 +126,14 @@ function to_favorite() {
     location.href = "../../favorite_page/templates/favorite_page.html"
 }
 
-function to_my_pg() {
+function to_mypage() {
     location.href = "../../my_page/templates/mypage.html"
 }
 
 function to_user_pg() {
     location.href = '../../other_user_page/templates/other_user_page.html'
+}
+function go_back() {
+    window.history.back();
 }
 
