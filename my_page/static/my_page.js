@@ -21,7 +21,14 @@ function get_mypage(){
                         let feed_count = ['feed_count']
                         let follower_count = ['follower']
                         let following_count = ['following']
-                        let profile_img =
+                        let newimage = document.createElement('img');
+                        newimage.setAttribute('class','img')
+                        newimage.src = ['image']
+                        newimage.style.borderRadius : 50%;
+                        newimage.style.height : 20vw;
+                        newimage.style.width : 20vw;
+                        let container = document.getElementById('#profile-image');
+                        container.append(newImage);
 
                         let temp_name = `<b>${name}</b>`
                         let temp_feed_count = `<b>${feed_count}</b>`
