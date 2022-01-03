@@ -1,0 +1,107 @@
+* {
+    font-family: 'Dongle', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom-width: 0.1vh;
+    border-bottom-style: solid;
+    border-bottom-color: lightgrey;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 15vw;
+    padding-left: 5vw;
+    position: fixed;
+    background-color: white;
+}
+
+.mobile-footer {
+    border-top-width: 0.1vh;
+    border-top-style: solid;
+    border-top-color: lightgrey;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 21vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+}
+
+.favorite-feed {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+}
+
+.user-name-and-img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.feed-user-img {
+    margin: 1% 2%;
+}
+
+.feed-user-name {
+    font-size: 4vw;
+    font-weight: bold;
+}
+
+.user-page-img-btn {
+    border-radius: 50%;
+    height: 7vw;
+    width: 7vw;
+
+    border: none;
+    background-color: transparent;
+}
+
+.favorite-feed > img {
+    width: 100%;
+}
+
+
+.screen {
+    width: 100%;
+    padding-top: 15vw;
+    padding-bottom: 20vw;
+}
+
+.back-img {
+    height: 6vw;
+}
+
+.home-btn {
+    height: 6vw;
+}
+
+.search-btn {
+    height: 6vw;
+}
+
+.plus-btn {
+    height: 10vw;
+}
+
+.favorite-btn {
+    height: 6vw;
+}
+
+.my-page-img-btn {
+    border-radius: 50%;
+    height: 10vw;
+    width: 10vw;
+}
