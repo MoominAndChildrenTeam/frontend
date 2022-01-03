@@ -26,7 +26,7 @@ function get_my_page(){
                             let new_feed_img = document.createElement('feed_img');
                             new_feed_img.setAttribute('class', feed_image)
                             new_profile_image.src = ['image']
-
+                            new_follow_btn.attr("onclick", "movepage()");
                             $('#feed').append(new_feed_line)
                         }
                         }
