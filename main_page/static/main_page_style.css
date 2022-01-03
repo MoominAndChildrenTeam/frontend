@@ -27,15 +27,23 @@
     height: 6vw;
     width: 7vw;
 }
-
+/* 기능 구현 실패로 숨김 처리
 .camera-btn-box {
     height: 7vw;
     width: 7vw;
-}
 
+    background-color: white;
+}
+*/
 .logo-img {
     width: 40vw;
     height: 15vw;
+}
+
+.body {
+    width: 100%;
+
+    padding-bottom: 15vw;
 }
 
 .story {
@@ -249,7 +257,7 @@
     bottom: 0;
     right: 0;
     margin: 0 auto;
-    height: 20vw;
+    height: 15vw;
     width: 100%;
 
     display: flex;
