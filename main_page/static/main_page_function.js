@@ -22,6 +22,43 @@ function to_user_pg() {
     location.href = '../../other_user_page/templates/other_user_page.html'
 }
 
+/*스토리 부분 스트롤 관련 참고 코드
+const scroll = (direction) => {
+    const instaStory = document.querySelector('.users-stories');
+    let scrollAmount = 0;
+
+    const slide = setInterval((e) => {
+        if (direction === 'left') {
+            instaStory.scrollLeft -= 15;
+        } else {
+            instaStory.scrollLeft += 15;
+        }
+
+        scrollAmount += 5;
+        if (scrollAmount >= 100) {
+            window.clearInterval(slide);
+        }
+    }, 20);
+}
+ */
+
+
+
+/*좋아요 버튼 이미지 변경 일부 구현*/
+let like = document.querySelector('.like-btn');
+like.addEventListener('click', function() {
+    var likeBtn = document.querySelector('.like-btn');
+    var likedBtn = document.querySelector('.liked-btn');
+
+    if (likeBtn.style.display === 'none') {
+        likeBtn.style.display = 'inline-block';
+        likedBtn.style.display = 'none';
+    } else {
+        likeBtn.style.display = 'none';
+        likedBtn.style.display = 'inline-block';
+    }
+})
+
 $(document).ready(function () {
             show_each_user_story()
             show_feed()
