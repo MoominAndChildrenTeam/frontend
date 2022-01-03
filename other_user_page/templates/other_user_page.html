@@ -30,7 +30,7 @@
 
         </div>
     <div class='all'>
-        <div class="profile">
+        <div class="profile" id = 'profile'>
             <div>
                 <img class="my-page-img1" onclick="reload()" src="../../src/static/images/무민.jfif"/>
             </div>
@@ -49,8 +49,14 @@
                             <h class=countmargin><b>3</b></h>
                         </div>
                     </div>
+
                     <div id = follow_btn>
-                    <button type="button" class="btn btn-primary"><b>팔로우</b></button>
+                        {% if follow_status == 1 %}
+                            <button type="button" class="btn btn-primary" style="width: 100%"><b>팔로우</b></button>
+                        {% endif %}
+                        {% if follow_status == 0 %}
+                            <button type="button" class="btn btn-light" style="width: 100%"><b>팔로잉 </b></button>
+                         {% endif %}
                     </div>
                 </div>
         </div>
@@ -77,11 +83,21 @@
         </div>
     </div>
     <div class="mobile-footer">
+        <div>
         <img class="icon2" onclick="movepage()" src="../../src/static/images/home@3x.png">
+            </div>
+        <div>
         <img class="icon2" src="../../src/static/images/search@3x.png">
+            </div>
+        <div>
         <img class="icon3" onclick="movepage()" src="../../src/static/images/plus.png">
+            </div>
+        <div>
         <img class="icon2" onclick="movepage()" src="../../src/static/images/like@3x.png">
+            </div>
+        <div id = my_footer_img>
         <img class="my-page-img" onclick="movepage()" src="../../src/static/images/무민.jfif">
+            </div>
     </div>
 </body>
 </html>

@@ -32,7 +32,12 @@ function get_my_page(){
 
                         let introduce = ['introduce']
                         let container = document.getElementById('#profile-image');
-                        container.append(newImage);
+                        container.append(new_profile_image);
+
+                        let container_foot = document.getElementById('#my_footer_img');
+                        container_foot.append(new_footer_image);
+
+
 
                         let temp_introduce = `<p style="margin-top: 0">${introduce}</p>`
                         let temp_name = `<b>${name}</b>`
@@ -45,6 +50,8 @@ function get_my_page(){
                         $('#feed').append(temp_feed_count)
                         $('#follower_count').append(temp_follower_count)
                         $('#following_count').append(temp_following_count)
+                        $('#profile').append(new_profile_image)
+                        $('#my_footer_img').append(new_footer_image)
                 }
             });
 }

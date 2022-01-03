@@ -23,6 +23,17 @@ function get_other_user_page(){
                         let following_count = ['following']
                         let new_profile_image = document.createElement('profile_img');
                         let new_footer_image = document.createElement('footer_img');
+                        let follow_status = ['follow_status']
+                        if (follow_status == 0) {
+                        $('#follow_btn').attr("class", "btn btn-light");
+                        $('#follow_btn').attr("onclick", "post_follow()");
+                        $('#follow_btn').text("팔로잉");
+                        }
+                        else if (follow_status == 1) {
+                        $('#follow_btn').attr("class", "btn btn-primary");
+                        $('#follow_btn').attr("onclick", "post_follow()");
+                        $('#follow_btn').text("팔로우");
+                        }
 
                         new_profile_image.setAttribute('class', my-page-img1)
                         new_profile_image.src = ['image']
@@ -33,7 +44,6 @@ function get_other_user_page(){
                         let introduce = ['introduce']
                         let container = document.getElementById('#profile-image');
                         container.append(newImage);
-
                         let temp_introduce = `<p style="margin-top: 0">${introduce}</p>`
                         let temp_name = `<b>${name}</b>`
                         let temp_feed_count = `<b>${feed_count}</b>`
@@ -45,19 +55,34 @@ function get_other_user_page(){
                         $('#feed').append(temp_feed_count)
                         $('#follower_count').append(temp_follower_count)
                         $('#following_count').append(temp_following_count)
+                        $('#profile').append(new_profile_image)
+                        $('#my_footer_img').append(new_footer_image)
                 }
             });
 }
 
 function post_follow(){
     let follower_count = ['follower']
-    follower_count += 1
-    document.getElementById('follow_btn').innerHTML=
+    let follow_status = ['follow_status']
              $.ajax({
                 type: "POST",
                 url: "/other_user_page",
                 data: {'follower_count' : follower_count},
                 success: function (response) {
+                    if (follow_status == 0) {
+                        $(self).attr("class", "btn btn-light");
+                        $(self).attr("onclick", "post_follow()");
+                        $(self).text("팔로잉");
+                        }
+                    else if (follow_status == 1) {
+                        $(self).attr("class", "btn btn-primary");
+                        $(self).attr("onclick", "post_follow()");
+                        $(self).text("팔로우");
+                        }
+                    }
+        },
+
+
                     alert('팔로우 완료!')
                 }
              })
