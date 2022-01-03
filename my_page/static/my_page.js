@@ -31,14 +31,6 @@ function get_my_page(){
                         new_footer_image.src = ['image']
 
                         let introduce = ['introduce']
-                        let container = document.getElementById('#profile-image');
-                        container.append(new_profile_image);
-
-                        let container_foot = document.getElementById('#my_footer_img');
-                        container_foot.append(new_footer_image);
-
-
-
                         let temp_introduce = `<p style="margin-top: 0">${introduce}</p>`
                         let temp_name = `<b>${name}</b>`
                         let temp_feed_count = `<b>${feed_count}</b>`

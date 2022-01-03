@@ -42,8 +42,6 @@ function get_other_user_page(){
                         new_footer_image.src = ['image']
 
                         let introduce = ['introduce']
-                        let container = document.getElementById('#profile-image');
-                        container.append(newImage);
                         let temp_introduce = `<p style="margin-top: 0">${introduce}</p>`
                         let temp_name = `<b>${name}</b>`
                         let temp_feed_count = `<b>${feed_count}</b>`
@@ -55,8 +53,10 @@ function get_other_user_page(){
                         $('#feed').append(temp_feed_count)
                         $('#follower_count').append(temp_follower_count)
                         $('#following_count').append(temp_following_count)
-                        $('#profile').append(new_profile_image)
                         $('#my_footer_img').append(new_footer_image)
+                        $('#profile-image').append(new_profile_image)
+
+
                 }
             });
 }
