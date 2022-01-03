@@ -67,26 +67,27 @@ function get_other_user_page(){
 function post_follow(){
     let follower_count = ['follower']
     let follow_status = ['follow_status']
+
+    follower_count += 1
+    let btn_status = document.getElementById(follow_btn)
+    let kid_btn_status = btn_status.childNodes
+    if kid_btn_status.getElementById() == 'btn btn-light'
+    {
+        follow_status += 1
+        follower_count += 1
+    }
+    elif kid_btn_status.getElementById() == 'btn btn-primary'
+    {
+        follow_status -= 1
+        follower_count -= 1
+    }
              $.ajax({
                 type: "POST",
                 url: "/other_user_page",
-                data: {'follower_count' : follower_count},
+                data: {'follower_count' : follower_count, 'follow_status' : follow_status},
                 success: function (response) {
-                    if (follow_status == 0) {
-                        $(self).attr("class", "btn btn-light");
-                        $(self).attr("onclick", "post_follow()");
-                        $(self).text("팔로잉");
-                        }
-                    else if (follow_status == 1) {
-                        $(self).attr("class", "btn btn-primary");
-                        $(self).attr("onclick", "post_follow()");
-                        $(self).text("팔로우");
-                        }
-                    }
-        },
-
-
                     alert('팔로우 완료!')
-                }
+                    window.location.reload()
+                    }
              })
     }
