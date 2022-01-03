@@ -27,7 +27,7 @@ function get_my_page(){
                             new_feed_img.setAttribute('class', feed_image)
                             new_feed_img.src = ['image']
                             new_feed_img("onclick", "movepage()");
-                            $('#feed').append(new_feed_line)
+                            $('.feed').append(new_feed_line)
                         }
                         }
 
