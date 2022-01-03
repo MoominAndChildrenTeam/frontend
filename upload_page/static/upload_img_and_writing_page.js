@@ -48,6 +48,7 @@ function DropFile(dropAreaId, fileListId) {
       let img = dropArea.getElementsByClassName("preview")[0];
       img.src = reader.result;
       img.style.display = "block";
+      console.log(img);
     };
   }
 
@@ -62,10 +63,7 @@ function DropFile(dropAreaId, fileListId) {
 }
 
 const dropFile = new DropFile("drop-file", "files");
-
-function returnpage(){
-                window.history.go(-1);
-}
+var preview_img = document.querySelector('#feed_image_file');
 
 //업로드 버튼 누를때 파일 전송하는 함수
 function posting() {
@@ -75,17 +73,20 @@ function posting() {
   let day = date.getDate();
   let current_date = year + '.' + month + '.' + day
   let comment = $('#feed_content').val()
-  let img = $('#feed_image_file')[0]
+  let file = $('#chooseFile')[0].files[0]
   let form_data = new FormData()
+  console.log(file);
 
-  form_data.append("comment_receive", comment)
-  form_data.append("filename", img)
-  form_data.append("date",current_date)
+  form_data.append("comment_give", comment)
+  form_data.append("filename_give", file)
+  form_data.append("date_give",current_date)
 
-  if(!img) {
-    alert('사진을 업로드해주세요')
-  } else {
-      $ajax({
+  if (!file) {
+    alert('이미지를 업로드해 주세요.');
+    return;
+  }
+
+  $.ajax({
         type: "POST",
         url: "/upload_page",
         data: form_data,
@@ -93,25 +94,16 @@ function posting() {
         contentType: false,
         processData: false,
         success: function (response) {
-          alert(response["result"])
-          alert("게시글 업로드 완료!")
-          location.href = "../../main_page/templates/main_page.html"
-        },
-        error: function (request, status, error) {
-
-          alert("저장에 실패 했습니다.");
-
-          console.log("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);
-
+            alert(response["result"])
+            location.href = "../templates/main_page.html"
         }
-      });
-  }
+    });
 
 
 }
 
 function to_main() {
-    location.href = "../../main_page/templates/main_page.html"
+    location.href = "../templates/main_page.html"
 }
 
 function to_search() {

@@ -43,7 +43,23 @@ function search($e) {
 
     var searchInput = $('#search_input').val();  // 검색한 단어
 
-
+    $.ajax({
+        type: "POST",
+        url: "/search",
+        data: {
+            email: $('#userid').val(),
+            pw: $('#userpw').val(),
+            nickname: $('#usernick').val(),
+        },
+        success: function (response) {
+            if (response['result'] == 'success') {
+                alert('작성하신 이메일로 인증번호 발송하였습니다. 이메일 인증을 완료해주세요')
+                window.location.href = '/register2'
+            } else {
+                alert(response['msg'])
+            }
+        }
+    })
     if (searchInput == '') {
 
         $('#search_input').val('').blur();    //blur 처리하여 모바일에서 인풋 포커스 없애서 키패드 감추기
