@@ -48,3 +48,17 @@ function get_other_user_page(){
                 }
             });
 }
+
+function post_follow(){
+    let follower_count = ['follower']
+    follower_count += 1
+    document.getElementById('follow_btn').innerHTML=
+             $.ajax({
+                type: "POST",
+                url: "/other_user_page",
+                data: {'follower_count' : follower_count},
+                success: function (response) {
+                    alert('팔로우 완료!')
+                }
+             })
+    }
