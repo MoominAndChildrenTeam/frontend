@@ -24,16 +24,18 @@ function get_other_user_page(){
                         let new_profile_image = document.createElement('profile_img');
                         let new_footer_image = document.createElement('footer_img');
                         let follow_status = ['follow_status']
-                        if (follow_status == 0) {
-                        $('#follow_btn').attr("class", "btn btn-light");
-                        $('#follow_btn').attr("onclick", "post_follow()");
-                        $('#follow_btn').text("팔로잉");
+
+                        let new_follow_btn = document.createElement('follow_button');
+                    if (follow_status == 0) {
+                        new_follow_btn.attr("class", "btn btn-light");
+                        new_follow_btn.attr("onclick", "post_follow()");
+                        new_follow_btn.text("팔로잉");
                         }
-                        else if (follow_status == 1) {
-                        $('#follow_btn').attr("class", "btn btn-primary");
-                        $('#follow_btn').attr("onclick", "post_follow()");
-                        $('#follow_btn').text("팔로우");
-                        }
+                    else if (follow_status == 1) {
+                    new_follow_btn.attr("class", "btn btn-primary");
+                    new_follow_btn.attr("onclick", "post_follow()");
+                    new_follow_btn.text("팔로우");
+                    }
 
                         new_profile_image.setAttribute('class', my-page-img1)
                         new_profile_image.src = ['image']
@@ -55,6 +57,7 @@ function get_other_user_page(){
                         $('#following_count').append(temp_following_count)
                         $('#my_footer_img').append(new_footer_image)
                         $('#profile-image').append(new_profile_image)
+                        $('#follow_btn').append(new_follow_btn)
 
 
                 }
