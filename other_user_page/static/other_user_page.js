@@ -17,6 +17,20 @@ function get_other_user_page(){
                 url: "/other_user_page",
                 data: {},
                 success: function (response) {
+                    let rows = response['my_feeds']
+                        for(let i = 0; i < math.ceil(3/(rows.length)); i++){
+                            let new_feed_line = document.createElement('feed_line');
+                            new_feed_line.setAttribute('class', feed)
+                            $('#content').append(new_feed_line)
+                        for(let a = 0; a < 3; a++){
+                            let new_feed_img = document.createElement('feed_img');
+                            new_feed_img.setAttribute('class', feed_image)
+                            new_feed_img.src = ['image']
+                            new_feed_img("onclick", "movepage()");
+                            $('.feed').append(new_feed_line)
+                        }
+                        }
+
                         let name = ['name']
                         let feed_count = ['feed_count']
                         let follower_count = ['follower']
