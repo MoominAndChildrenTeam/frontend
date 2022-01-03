@@ -1,5 +1,5 @@
 $(document).ready(function () {
-            get_mypage()
+            get_other_user_page()
         });
 
 function returnpage(){
@@ -11,10 +11,10 @@ function  reload(){
 function movepage(){
     location.href='https://www.naver.com'
 }
-function get_mypage(){
+function get_other_user_page(){
              $.ajax({
                 type: "GET",
-                url: "/my_page",
+                url: "/other_user_page",
                 data: {},
                 success: function (response) {
                         let name = ['name']

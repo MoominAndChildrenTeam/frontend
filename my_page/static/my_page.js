@@ -1,5 +1,5 @@
 $(document).ready(function () {
-            get_mypage()
+            get_my_page()
         });
 
 function returnpage(){
@@ -11,7 +11,7 @@ function  reload(){
 function movepage(){
     location.href='https://www.naver.com'
 }
-function get_mypage(){
+function get_my_page(){
              $.ajax({
                 type: "GET",
                 url: "/my_page",
