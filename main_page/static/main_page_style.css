@@ -149,12 +149,6 @@
     cursor: pointer;
 }
 
-.liked-btn {
-    height: 6vw;
-    display: none;
-    cursor: pointer;
-}
-
 .feed-content-box {
     display: flex;
     flex-direction: column;
@@ -175,6 +169,11 @@
 
     margin-bottom: 0;
     margin-top: 0;
+}
+
+.user-comment-box {
+    display: flex;
+    flex-direction: column;
 }
 
 .user-comment-wrapper {
