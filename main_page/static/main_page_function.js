@@ -42,7 +42,30 @@ const scroll = (direction) => {
 }
  */
 
+/*댓글 입력 창 보이기, 숨기기*/
+let cmt = document.querySelector('.comment-btn');
+let cmt_container = document.querySelector('.comment-container')
+cmt.addEventListener('click', function () {
+    cmt_container.classList.toggle('active');
+    })
 
+
+let cmt_register = document.querySelector('.comment-register');
+cmt_register.addEventListener('click', function () {
+    const cmt_wrap = document.createElement('div.user-comment-wrapper')
+    const cmt_user = document.createElement('p.comment-user-name')
+    const cmt = document.createElement('p.comment')
+
+    cmt_wrap.classList.add('cmt_wrap')
+    cmt_user.classList.add('cmt_user')
+    cmt.classList.add('cmt')
+
+    cmt_wrap.append(cmt_user)
+    cmt_wrap.append(cmt)
+
+    let cmt_content = $('.comment-content').val()
+    cmt.textContent = cmt_content
+})
 
 /*좋아요 버튼 이미지 변경 일부 구현*/
 let like = document.querySelector('.like-btn');
