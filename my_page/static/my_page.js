@@ -25,17 +25,11 @@ function get_my_page(){
                         for(let a = 0; a < 3; a++){
                             let new_feed_img = document.createElement('feed_img');
                             new_feed_img.setAttribute('class', feed_image)
-                            new_profile_image.src = ['image']
-                            new_follow_btn.attr("onclick", "movepage()");
+                            new_feed_img.src = ['image']
+                            new_feed_img("onclick", "movepage()");
                             $('#feed').append(new_feed_line)
                         }
                         }
-
-
-                        let rows = response['my_feeds']
-                        for (let i = 0; i < rows.length; i++) {
-                            let img = rows[i]['image']
-
 
                             let name = ['name']
                             let feed_count = ['feed_count']
