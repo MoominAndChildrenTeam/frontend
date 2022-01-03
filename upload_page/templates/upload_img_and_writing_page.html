@@ -12,15 +12,15 @@
 </head>
 <body>
     <div class="header">
-        <img class="back-img" onclick="returnpage()" src="../../src/images/back@3x.png">
+        <img class="back-img" onclick="go_back()" src="../../src/static/images/back@3x.png">
         <p id="posting_text"><b>POSTing</b></p>
-        <img class='upload_image' onclick="posting()" src="../../src/images/plus.png">
+        <img class='upload_image' onclick="posting()" src="../../src/static/images/plus.png">
     </div>
     <div class="screen">
         <div class="img-container">
             <div id="drop-file" class="drag-file">
                 <label class="file-label" for="chooseFile">
-                    <img src="../../src/images/upload.png" alt="파일 아이콘" class="image"></label>
+                    <img src="../../src/static/images/upload.png" alt="파일 아이콘" class="image"></label>
                 <input class="file" id="chooseFile" type="file" onchange="dropFile.handleFiles(this.files)"
                        accept="image/png, image/jpeg, image/gif">
 
@@ -34,11 +34,11 @@
         </div>
     </div>
     <div class="mobile-footer">
-        <button class="home-btn"></button>
-        <button class="search-btn"></button>
-        <button class="plus-btn"></button>
-        <button class="favorite-btn"></button>
-        <button class="my-page-img-btn"></button>
+        <img class="icon2" onclick="to_main()" src="../../src/static/images/home@3x.png">
+        <img class="icon2" onclick="to_search()" src="../../src/static/images/search@3x.png">
+        <img class="icon3" onclick="to_upload()" src="../../src/static/images/plus.png">
+        <img class="icon2" onclick="to_favorite()" src="../../src/static/images/like@3x.png">
+        <img class="my-page-img" onclick="to_mypage()" src="../../src/static/images/무민.jfif">
     </div>
 </body>
 </html>

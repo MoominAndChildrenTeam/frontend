@@ -55,7 +55,15 @@
     align-items: center;
 
     width: 100%;
+
+    overflow: auto;
 }
+
+/* 스토리 부분 스크롤바 관련 참고 코드
+.users-stories::-webkit-scrollbar {
+    display: none;
+}
+*/
 
 .each-user-story {
     display: flex;
@@ -133,6 +141,18 @@
 
 .comment-btn {
     height: 6vw;
+}
+
+.like-btn {
+    height: 6vw;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.liked-btn {
+    height: 6vw;
+    display: none;
+    cursor: pointer;
 }
 
 .feed-content-box {
