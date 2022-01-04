@@ -80,11 +80,58 @@ cmt_register.addEventListener('click', function () {
 
 /*좋아요 버튼 이미지 변경 일부 구현*/
 let likeBtn = document.querySelector('.like-btn');
-let like_cnt = 'False';
+let like_cnt = 0;
+let liked_user_name = document.querySelector('.my-page-img-btn').getAttribute('alt')
 likeBtn.addEventListener('click', function () {
+    /*
     likeBtn.src = '../../src/static/images/heart.png'
     like_cnt = 'True'
+     */
+    if (like_cnt === 0) {
+        likeBtn.src = '../../src/static/images/heart.png';
+        like_cnt = 1;
+
+        $.ajax({
+            type: 'POST',
+            url: '/main_page',
+            data: {liked_user_name_give:liked_user_name, like_cnt_give:like_cnt},
+            success: function (response) {
+                alert(response['result'])
+            }
+        })
+    } else if (like_cnt === 1) {
+        likeBtn.src = '../../src/static/images/like@3x.png';
+        like_cnt = 0;
+
+        $.ajax({
+            type: 'POST',
+            url: '/main_page',
+            data: {liked_user_name_give:liked_user_name, like_cnt_give:like_cnt},
+            success: function (response) {
+                alert(response['result'])
+            }
+        })
+    }
 })
+
+function show_like() {
+    $.ajax({
+        type: 'GET',
+        url: '/main_page',
+        data: {},
+        success: function (response) {
+            let like_feeds = response['like_feeds']
+            for (let i=0; i < like_feeds.length; i++) {
+                let like_cnt = like_feeds[i]['like_cnt']
+                if (like_cnt === 0) {
+                    $('.like-btn').src = 'https://w7.pngwing.com/pngs/431/359/png-transparent-heart-computer-icons-symbol-zipper-love-zipper-heart-thumbnail.png';
+                } else if (like_cnt === 1) {
+                    $('.like-btn').src = 'https://e7.pngegg.com/pngimages/211/1012/png-clipart-heart-computer-icons-symbol-desktop-heart-shaped-pattern-love-heart.png';
+                }
+            }
+        }
+    })
+}
 
 /*
 if (like_cnt === 'False') {
@@ -131,12 +178,14 @@ $(document).ready(function () {
     show_each_user_story()
     show_feed()
     show_my_profile_btn()
+    show_comment()
+    show_like()
 });
 
 function show_each_user_story() {
     $.ajax({
         type: 'GET',
-        url: '',
+        url: '/main_page',
         data: {},
         success: function (response) {
             let stories = response['user_stories']
@@ -144,9 +193,9 @@ function show_each_user_story() {
                 let user_profile_img = stories[i]['user_profile_img']
                 let user_name = stories[i]['user_name']
                 let temp_html = `<div class="each-user-story">
-                                             <img class="user-story-img-btn" src="${user_profile_img}"/>
-                                             <p class="user-name">${user_name}</p>
-                                         </div>`
+                                     <img class="user-story-img-btn" src="${user_profile_img}"/>
+                                     <p class="user-name">${user_name}</p>
+                                 </div>`
                 $('.users-stories').append(temp_html)
             }
         }
@@ -156,7 +205,7 @@ function show_each_user_story() {
 function show_feed() {
     $.ajax({
         type: 'GET',
-        url: '',
+        url: '/main_page',
         data: {},
         success: function (response) {
             let feeds = response['feeds']
@@ -199,37 +248,19 @@ function show_feed() {
 function show_my_profile_btn() {
     $.ajax({
         type: 'GET',
-        url: '',
+        url: '/main_page',
         data: {},
         success: function (response) {
+            let user_profile_name = response['nickname']
             let user_profile_imgs = response['user_profile_imgs']
             for (let i = 0; i < user_profile_imgs.length; i++) {
                 let my_profile_img = user_profile_imgs[i]['my_profile_img']
-                let temp_html = `<img class="my-page-img-btn" src="${my_profile_img}" onclick="to_my_pg()">`
-                $('.my-page-img-btn').append(temp_html)
+                let temp_html = `<img class="my-page-img-btn" src="${my_profile_img}" alt="${user_profile_name}" onclick="to_my_pg()">`
+                $('.mobile-footer').append(temp_html)
             }
         }
     })
 }
-
-let cmt_register = document.querySelector('.comment-register');
-cmt_register.addEventListener('click', function () {
-    let comment = $('.comment-content').val()
-    let feed_user_name = $('.feed-user-name').val()
-
-    $.ajax({
-        type: "POST",
-        url: "/main_page",
-        data: {feed_user_name_give: feed_user_name, comment_give: comment},
-        success: function (response) {
-            alert(response["result"])
-        }
-    });
-})
-
-$(document).ready(function () {
-    show_comment()
-})
 
 function show_comment() {
     $.ajax({
@@ -239,15 +270,31 @@ function show_comment() {
         success: function (response) {
             let comments = response['comments']
             for (let i = 0; i < comments.length; i++) {
+                let comment_user_name = comments[i]['nickname']
                 let cmt = comments[i]['comment']
-                let feed_un = comments[i]['feed_user_name']
 
                 let temp_html = `<div class="user-comment-wrapper">
-                                    <p class="comment-user-name">${feed_un}</p>
+                                    <p class="comment-user-name">${comment_user_name}</p>
                                     <p class="comment">${cmt}</p>
-                                </div>`
+                                 </div>`
                 $('.user-comment-box').append(temp_html)
             }
         }
     })
 }
+
+let cmt_register = document.querySelector('.comment-register');
+cmt_register.addEventListener('click', function () {
+    let comment_user_name = $('.my-page-img-btn').getAttribute('alt')
+    let comment = $('.comment-content').val()
+
+    $.ajax({
+        type: "POST",
+        url: "/main_page",
+        data: {comment_user_name_give: comment_user_name, comment_give: comment},
+        success: function (response) {
+            alert(response["result"])
+        }
+    })
+})
+
