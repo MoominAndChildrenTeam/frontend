@@ -285,13 +285,14 @@ function show_comment() {
 
 let cmt_register = document.querySelector('.comment-register');
 cmt_register.addEventListener('click', function () {
-    let comment_user_name = $('.my-page-img-btn').getAttribute('alt')
+/*    let comment_user_name = $('.my-page-img-btn').getAttribute('alt')*/
+    let comment_user_name = $('.feed-user-name').innerText;
     let comment = $('.comment-content').val()
 
     $.ajax({
         type: "POST",
         url: "/main_page",
-        data: {comment_user_name_give: comment_user_name, comment_give: comment},
+        data: {nickname: comment_user_name, comment_give: comment},
         success: function (response) {
             alert(response["result"])
         }
